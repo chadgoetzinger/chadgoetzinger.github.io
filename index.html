@@ -20,6 +20,7 @@
     /* page structure */
     #main-container{
       max-width: 1000px;
+      min-width: 260px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -46,13 +47,11 @@
     #sitenav ul {
       padding: 0; 
       margin: 0;
-      margin-left:auto;
-      margin-right:auto;
       list-style-type:none;
-
+      text-align:center;
     }
     #sitenav li {
-      float:left;
+      display:inline-block;
       border-left: 1px solid black;
     }
     #sitenav li.first { border: none; }
@@ -66,8 +65,8 @@
       text-align:center;
     }
     #sitenav a:hover {
-      background-color:#d7d7b9;
-      color:#5e5845;
+      background:#b4ddcc;
+      cursor:pointer;
     }
 
     #content  {
@@ -79,7 +78,10 @@
     }
 
 
-  @media only screen and (max-device-width: 480px) {
+  @media(max-width: 540px) {
+    #header h1 {
+      font-size: 25px;
+    }
     
   }
   </style>
@@ -96,9 +98,10 @@
 
 
     <div id="sitenav">
-      <ul><li><a href="index.html">Home</li></a>
-      <li><a href="gallery.html">Gallery</li></a>
-      <li><a href="blog">Blog</li></a>
+      <ul>
+        <li class="first"><a href="index.html">Home</li></a>
+        <li><a href="gallery.html">Gallery</li></a>
+        <li><a href="blog">Blog</li></a>
       </ul>
     </div><!--closed sutenav--> 
     <div id="content">
